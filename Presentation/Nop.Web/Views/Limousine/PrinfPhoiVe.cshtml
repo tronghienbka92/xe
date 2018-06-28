@@ -1,0 +1,21 @@
+﻿@model Nop.Web.Models.NhaXes.QuanLyChuyenModel
+@{
+    Layout = null;
+    Model.sodoghe.PhanLoai = Nop.Core.Domain.NhaXes.ENPhanLoaiPhoiVe.IN_PHOI_VE;
+}
+<table style="width:100%" cellpadding="5" cellspacing="5">
+    <tr>
+        <td colspan="4">
+            <h2>GIẤY ĐI ĐƯỜNG</h2>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Hành trình:</strong> @Model.chuyendihientai.TenHanhTrinh</td>
+        <td><strong>Thời gian chạy:</strong> @Model.chuyendihientai.NgayDiThuc.ToString("dd/MM/yyyy HH:mm")</td>
+        <td><strong>Biển số:</strong> @Model.chuyendihientai.BienSoXe</td>
+        <td><strong>Lái xe:</strong> @Model.chuyendihientai.TenLaiXe</td>
+    </tr>    
+</table>
+
+@Html.Partial("_GetInfoSoDoGheXeToDatVe", Model)
+

@@ -1,0 +1,38 @@
+﻿@model List<LichSuBanVe>
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Events
+@using Nop.Services.Events
+@using Nop.Services.NhaXes
+@using Nop.Core.Domain.NhaXes
+
+<div class="title">
+    <img src="@Url.Content("~/Content/chonve/nxmenu/keve_capnhatchuyen.png")" alt="" />
+    Thông tin lịch sử bán vé
+</div>
+<table class="lichsubanve" style="width:100%">
+    <thead>
+        <tr>
+            <td>STT</td>
+            <td>Nội dung</td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var stt = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@stt</td>
+                <td>@item.NoiDung</td>
+            </tr>
+            stt++;
+        }
+    </tbody>
+</table>
+<style>
+    .lichsubanve, .lichsubanve tr, .lichsubanve tr td {
+        border: 1px solid #928d8d;
+    }
+</style>
+
